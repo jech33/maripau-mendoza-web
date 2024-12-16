@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-regalBlue-800 relative mt-20 px-8 pb-10 font-light text-white">
       <Image
-        src={"/Logotipo_principal.png"}
+        src={"/Logotipo_Principal.png"}
         alt="Logo"
         className="mx-auto w-[400px]"
         width={1080}
