@@ -17,6 +17,19 @@ export default function Navbar() {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
+  const handleMenuClick = () => {
+    setIsOpen((prev) => {
+      const newStatus = !prev;
+      document.body.style.overflow = newStatus ? "hidden" : "scroll";
+      return newStatus;
+    });
+  };
+
+  const handleMenuItemClick = () => {
+    setIsOpen(false);
+    document.body.style.overflow = "scroll";
+  };
+
   useEffect(() => {
     const controlNavbar = () => {
       if (window.scrollY > lastScrollY) {
@@ -52,7 +65,7 @@ export default function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="hover:text-regalBlue-600 my-4 font-bold transition-colors duration-200"
+              className="my-3 font-bold transition-colors duration-200 hover:text-regalBlue-600"
               onClick={() => setIsOpen(false)}
             >
               {item.name}
@@ -64,7 +77,7 @@ export default function Navbar() {
       {/* Mobile */}
       <div className="relative z-50 sm:hidden">
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={handleMenuClick}
           className="fixed right-4 top-4 z-50 rounded-full bg-white p-2 shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           aria-label="Toggle menu"
         >
@@ -81,7 +94,7 @@ export default function Navbar() {
           } transition-transform duration-300 ease-in-out`}
         >
           <nav className="flex h-full flex-col items-center justify-center">
-            <Link href="/" onClick={() => setIsOpen(false)}>
+            <Link href={`#${homeRoutes.HERO}`} onClick={handleMenuItemClick}>
               <Image
                 src="/Logo.png"
                 alt="Logo"
@@ -95,7 +108,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 className="my-4 text-2xl font-bold text-white transition-colors duration-300 hover:text-indigo-200"
-                onClick={() => setIsOpen(false)}
+                onClick={handleMenuItemClick}
               >
                 {item.name}
               </Link>

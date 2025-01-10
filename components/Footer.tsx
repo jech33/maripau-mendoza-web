@@ -3,11 +3,14 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-regalBlue-800 relative mt-20 px-8 pb-10 font-light text-white">
+    <footer className="relative mt-20 bg-regalBlue-800 px-8 pb-10 pt-12 font-light text-white">
+      <p className="relative text-center text-lg font-extralight">
+        Creando espacios para sanar
+      </p>
       <Image
         src={"/Logotipo_Principal.png"}
         alt="Logo"
-        className="mx-auto w-[400px]"
+        className="mx-auto -mb-10 -mt-16 w-[350px] object-cover"
         width={1080}
         height={1080}
       />

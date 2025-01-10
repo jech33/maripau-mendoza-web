@@ -8,54 +8,51 @@ const ServicesSection = () => {
     {
       id: 1,
       description: "1 sesión",
-      price: "$130.000 COP",
+      price: "130.000 COP",
     },
     {
       id: 2,
       description: "4 sesiones",
-      price: "$500.000 COP",
+      price: "500.000 COP",
     },
     {
       id: 3,
       description: "6 sesiones",
-      price: "$720.000 COP",
+      price: "720.000 COP",
     },
   ];
+
+  const titleProps = {
+    className: "mb-4 text-2xl font-medium sm:text-3xl",
+    text: "Consultas",
+  };
 
   return (
     <section
       id={homeRoutes.SERVICES}
       className="container mx-auto flex flex-col justify-start px-8 pt-10 text-left"
     >
-      <h2 className="mb-4 text-2xl font-medium sm:text-3xl">
-        Opciones de consulta
-      </h2>
+      <h2 className={`${titleProps.className} sm:hidden`}>{titleProps.text}</h2>
       <div className="wrapper flex flex-col-reverse gap-8 sm:flex-row">
         <div className="flex-1">
+          <h2 className={`${titleProps.className} hidden sm:block`}>
+            {titleProps.text}
+          </h2>
           <p className="mb-6">
             Mis servicios están diseñados para brindarte flexibilidad y
             accesibilidad, ajustándome a tus necesidades personales. Puedes
-            elegir entre sesiones individuales o paquetes más económicos que te
-            ayudarán a comprometerte con tu proceso de bienestar emocional.
+            elegir entre sesiones individuales o paquetes que te ayudarán a
+            comprometerte con tu proceso de bienestar emocional.
           </p>
-          <table className="w-full table-auto overflow-hidden rounded-md">
-            <thead className="bg-beige">
-              <tr>
-                <th className="p-2">Sesiones</th>
-                <th className="p-2">Precio</th>
-              </tr>
-            </thead>
-            <tbody>
-              {services.map((service) => (
-                <tr key={service.id} className="border-b border-beige">
-                  <td className="p-2">{service.description}</td>
-                  <td className="p-2">{service.price}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div className="gap flex w-full flex-col gap-1 text-center">
+            {services.map((service) => (
+              <p key={service.id}>
+                {service.description} - {service.price}
+              </p>
+            ))}
+          </div>
           <Button size="lg" className="mt-10 w-full">
-            Reserva aquí tu sesión
+            AGENDAR CITA
           </Button>
         </div>
         <div className="flex-1">
