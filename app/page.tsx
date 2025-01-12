@@ -8,15 +8,12 @@ import ServicesSection from "@/components/ServicesSection";
 export default function Home() {
   return (
     <main>
-      <Navbar />
       <Hero />
+      <Navbar />
       <MeSection />
-      <div className="container mx-auto mt-10 h-[1px] w-full px-8">
-        <div className="h-[1px] w-full bg-beige" />
-      </div>
       <ServicesSection />
       <div className="container mx-auto mt-10 h-[1px] w-full px-8">
-        <div className="h-[1px] w-full bg-beige" />
+        <div className="h-[3px] w-full bg-beige" />
       </div>
       <FaqSection />
       <Footer />

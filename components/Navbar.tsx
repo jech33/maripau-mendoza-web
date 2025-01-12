@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
@@ -14,8 +14,10 @@ const navItems = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [show, setShow] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const show = true;
+  // const [show, setShow] = useState(true);
+  // const [lastScrollY, setLastScrollY] = useState(0);
+  // const height = 598;
 
   const handleMenuClick = () => {
     setIsOpen((prev) => {
@@ -30,32 +32,33 @@ export default function Navbar() {
     document.body.style.overflow = "scroll";
   };
 
-  useEffect(() => {
-    const controlNavbar = () => {
-      if (window.scrollY > lastScrollY) {
-        // if scroll down hide the navbar
-        setShow(false);
-      } else {
-        // if scroll up show the navbar
-        setShow(true);
-      }
+  // useEffect(() => {
+  //   const controlNavbar = () => {
+  //     if (window.scrollY > lastScrollY && window.scrollY > height) {
+  //       // if scroll down hide the navbar
+  //       console.log(lastScrollY);
+  //       setShow(false);
+  //     } else {
+  //       // if scroll up show the navbar
+  //       setShow(true);
+  //     }
 
-      // remember current page location to use in the next move
-      setLastScrollY(window.scrollY);
-    };
+  //     // remember current page location to use in the next move
+  //     setLastScrollY(window.scrollY);
+  //   };
 
-    window.addEventListener("scroll", controlNavbar);
+  //   window.addEventListener("scroll", controlNavbar);
 
-    // cleanup function
-    return () => {
-      window.removeEventListener("scroll", controlNavbar);
-    };
-  }, [lastScrollY]);
+  //   // cleanup function
+  //   return () => {
+  //     window.removeEventListener("scroll", controlNavbar);
+  //   };
+  // }, [lastScrollY]);
 
   return (
     <>
       {/* Desktop */}
-      <div className="sticky top-4 z-50 hidden w-full justify-center sm:flex">
+      <div className="sticky top-4 z-50 -mt-6 mb-6 hidden w-full justify-center sm:flex">
         <nav
           className={`absolute flex w-fit items-center justify-center gap-8 rounded-full bg-ivory px-8 shadow-md transition-transform ${
             show ? "translate-y-0" : "-translate-y-20"
@@ -65,7 +68,7 @@ export default function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="my-3 font-bold transition-colors duration-200 hover:text-regalBlue-600"
+              className="my-3 font-bold text-[#3D2A19] transition-colors duration-200 hover:text-yellow-900"
               onClick={() => setIsOpen(false)}
             >
               {item.name}

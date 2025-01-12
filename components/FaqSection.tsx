@@ -2,8 +2,8 @@ import { homeRoutes } from "@/app/_utils/constants";
 
 const FaqSection = () => {
   return (
-    <section id={homeRoutes.FAQ} className="container mx-auto mt-10 px-8">
-      <h2 className="mb-4 text-2xl font-medium sm:text-3xl">
+    <section id={homeRoutes.FAQ} className="container mx-auto mt-20 px-8">
+      <h2 className="mb-4 text-2xl font-bold sm:text-3xl">
         Preguntas frecuentes
       </h2>
       <ul className="mt-4 flex flex-col gap-5">
