@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div
       id={homeRoutes.HERO}
-      className="relative flex h-[50lvh] min-h-[500] w-full items-center justify-center overflow-hidden bg-[#b5ad96]"
+      className="relative flex h-[50lvh] min-h-[500px] w-full items-center justify-center overflow-hidden bg-[#b5ad96]"
     >
       {/* Background Image */}
       <div className="absolute h-full w-full md:relative md:w-1/2">
