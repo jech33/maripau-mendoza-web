@@ -1,7 +1,8 @@
-import { homeRoutes } from "@/app/_utils/constants";
+import { homeRoutes, socialMediaLinks } from "@/app/_utils/constants";
 import React from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import ServicesFirst from "./ServicesFirst";
 
 const ServicesSection = () => {
   const services = [
@@ -29,11 +30,15 @@ const ServicesSection = () => {
 
   return (
     <section id={homeRoutes.SERVICES} className="relative overflow-hidden">
+      <div className="bg-beige">
+        <ServicesFirst />
+      </div>
+
       <div className="container mx-auto flex flex-col justify-start px-8 text-left">
         <h2 className={`${titleProps.className} pb-4 pt-10 sm:hidden`}>
           {titleProps.text}
         </h2>
-        <div className="wrapper flex flex-col-reverse gap-8 sm:flex-row">
+        <div className="wrapper flex flex-col-reverse gap-8 sm:flex-row-reverse">
           <div className="flex-1 sm:pt-20">
             <h2 className={`${titleProps.className} hidden sm:block`}>
               {titleProps.text}
@@ -51,14 +56,18 @@ const ServicesSection = () => {
                 </p>
               ))}
             </div>
-            <div className="flex justify-center">
+            <a
+              className="flex justify-center"
+              href={socialMediaLinks.whatsapp}
+              target="_blank"
+            >
               <Button size="lg" className="mt-10 w-full sm:w-auto">
                 AGENDAR CITA
               </Button>
-            </div>
+            </a>
           </div>
           <div className="h-[300px] sm:h-[600px] sm:flex-1">
-            <div className="absolute left-0 h-[300px] w-full bg-slate-500 sm:absolute sm:left-auto sm:h-[600px] sm:w-1/2">
+            <div className="absolute left-0 h-[300px] w-full bg-slate-500 sm:absolute sm:-left-14 sm:h-[600px] sm:w-1/2">
               <Image
                 src="/Picture_3.jpeg"
                 alt="Services"

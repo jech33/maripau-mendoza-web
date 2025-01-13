@@ -23,11 +23,12 @@ const Footer = () => {
         <Image
           src={"/Logotipo_Principal.png"}
           alt="Logo"
-          className="mx-auto mr-0 w-[150] rounded-full object-cover md:w-[250px]"
+          className="mx-auto mr-0 w-[100px] rounded-full object-cover sm:w-[150px] md:w-[250px]"
           width={1080}
           height={1080}
         />
       </div>
+
       <p className="text-center text-sm font-semibold">
         © 2024 Psicóloga María Paula Mendoza V. Todos los derechos reservados.
       </p>

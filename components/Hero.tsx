@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { homeRoutes } from "@/app/_utils/constants";
+import { homeRoutes, socialMediaLinks } from "@/app/_utils/constants";
 
 export default function Hero() {
   return (
@@ -16,7 +16,7 @@ export default function Hero() {
           layout="fill"
           objectFit="cover"
           objectPosition="50% 40%"
-          quality={100}
+          quality={90}
           priority
         />
       </div>
@@ -41,9 +41,11 @@ export default function Hero() {
             <h2 className="mb-4 text-xl font-light sm:text-2xl md:text-3xl">
               Psicóloga Clínica
             </h2>
-            <Button size="lg" className="mt-4 md:mt-8">
-              AGENDAR CITA
-            </Button>
+            <a href={socialMediaLinks.whatsapp} target="_blank">
+              <Button size="lg" className="mt-4 md:mt-8">
+                AGENDAR CITA
+              </Button>
+            </a>
           </div>
         </div>
       </div>
