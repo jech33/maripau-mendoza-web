@@ -1,4 +1,4 @@
-import { socialMediaLinks } from "@/app/_utils/constants";
+import { externalLinks } from "@/app/_utils/constants";
 import {
   IconBrandInstagram,
   IconBrandWhatsapp,
@@ -13,19 +13,19 @@ const SocialMedia = (props: { className?: string }) => {
     {
       id: 1,
       name: "Instagram",
-      url: socialMediaLinks.instagram,
+      url: externalLinks.instagram,
       icon: IconBrandInstagram,
     },
     {
       id: 2,
       name: "Whatsapp",
-      url: socialMediaLinks.whatsapp,
+      url: externalLinks.whatsapp,
       icon: IconBrandWhatsapp,
     },
     {
       id: 3,
       name: "Email",
-      url: socialMediaLinks.email,
+      url: externalLinks.email,
       icon: IconMail,
     },
   ];

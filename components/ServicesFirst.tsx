@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
-import { socialMediaLinks } from "@/app/_utils/constants";
+import { externalLinks } from "@/app/_utils/constants";
 
 const ServicesFirst = () => {
   const titleProps = {
@@ -27,7 +27,7 @@ const ServicesFirst = () => {
           </p>
           <a
             className="flex justify-center"
-            href={socialMediaLinks.whatsapp}
+            href={externalLinks.calendly}
             target="_blank"
           >
             <Button size="lg" className="my-10 w-full sm:w-auto">

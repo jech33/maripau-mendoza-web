@@ -1,4 +1,4 @@
-import { homeRoutes, socialMediaLinks } from "@/app/_utils/constants";
+import { homeRoutes, externalLinks } from "@/app/_utils/constants";
 import React from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
@@ -58,7 +58,7 @@ const ServicesSection = () => {
             </div>
             <a
               className="flex justify-center"
-              href={socialMediaLinks.whatsapp}
+              href={externalLinks.calendly}
               target="_blank"
             >
               <Button size="lg" className="mt-10 w-full sm:w-auto">

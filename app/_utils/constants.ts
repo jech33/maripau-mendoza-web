@@ -5,9 +5,11 @@ export const homeRoutes = {
   FAQ: "faq",
 };
 
-export const socialMediaLinks = {
-  instagram: "https://www.instagram.com/psicologia.mpmendoza",
+export const externalLinks = {
+  instagram:
+    "https://www.instagram.com/psicologia.mpmendoza?igsh=MTY1aHB1d2lua28z",
   whatsapp:
-    "https://wa.me/573162790617?text=¡Hola! Estoy interesada en conocer más información sobre las consultas.",
-  email: "mailto:johndoe@fakeemail.com",
+    "https://wa.me/573116428547?text=¡Hola! Estoy interesada en conocer más información sobre las consultas.",
+  email: "mailto:psicologia.mpmendoza@gmail.com",
+  calendly: "https://calendly.com/psicologia-mpmendoza",
 };
