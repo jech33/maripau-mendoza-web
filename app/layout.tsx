@@ -25,8 +25,7 @@ export const metadata: Metadata = {
     "psicología, terapia, psicóloga Barranquilla, psicoterapia cognitivo-conductual, salud mental, terapia online, María Paula Mendoza",
   openGraph: {
     title: "Psicóloga | María Paula Mendoza V. | Barranquilla",
-    description:
-      "Creando espacios para sanar con psicoterapia especializada para niños, adolescentes y mujeres en Barranquilla.",
+    description: "Creando espacios para sanar",
     url: "https://www.psicologamariapaulamendoza.com.co/",
     type: "website",
   },
