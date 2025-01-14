@@ -41,7 +41,7 @@ export default function Hero() {
             <h2 className="mb-4 text-xl font-light sm:text-2xl md:text-3xl">
               Psicóloga Clínica
             </h2>
-            <a href={externalLinks.calendly} target="_blank">
+            <a href={externalLinks.whatsapp} target="_blank">
               <Button size="lg" className="mt-4 md:mt-8">
                 AGENDAR CITA
               </Button>

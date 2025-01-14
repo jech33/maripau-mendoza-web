@@ -21,6 +21,19 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Psicóloga | María Paula Mendoza V. | Barranquilla",
   description: "Creando espacios para sanar",
+  keywords:
+    "psicología, terapia, psicóloga Barranquilla, psicoterapia cognitivo-conductual, salud mental, terapia online, María Paula Mendoza",
+  openGraph: {
+    title: "Psicóloga | María Paula Mendoza V. | Barranquilla",
+    description:
+      "Creando espacios para sanar con psicoterapia especializada para niños, adolescentes y mujeres en Barranquilla.",
+    url: "https://www.psicologamariapaulamendoza.com.co/",
+    type: "website",
+  },
+  authors: [
+    { name: "Javier Echavez Chardaux", url: "https://jech.vercel.app/" },
+    { name: "María Paula Mendoza V." },
+  ],
 };
 
 export default function RootLayout({

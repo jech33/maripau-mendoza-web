@@ -27,7 +27,7 @@ const ServicesFirst = () => {
           </p>
           <a
             className="flex justify-center"
-            href={externalLinks.calendly}
+            href={externalLinks.whatsapp}
             target="_blank"
           >
             <Button size="lg" className="my-10 w-full sm:w-auto">

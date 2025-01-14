@@ -58,7 +58,7 @@ const ServicesSection = () => {
             </div>
             <a
               className="flex justify-center"
-              href={externalLinks.calendly}
+              href={externalLinks.whatsapp}
               target="_blank"
             >
               <Button size="lg" className="mt-10 w-full sm:w-auto">
