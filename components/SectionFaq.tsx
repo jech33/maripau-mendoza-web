@@ -30,8 +30,8 @@ const FaqSection = () => {
             ¿A quién van dirigidas mis consultas?
           </p>
           <p>
-            Mis servicios están enfocados en: niños, niñas y adolescentes de 12
-            a 17 años, y mujeres mayores de 18 años.
+            Mis servicios están enfocados en: jóvenes de 14 a 17 años, y adultos
+            mayores de 18 años.
           </p>
         </li>
       </ul>
