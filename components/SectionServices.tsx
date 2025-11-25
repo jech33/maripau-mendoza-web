@@ -49,13 +49,14 @@ const ServicesSection = () => {
               elegir entre sesiones individuales o paquetes que te ayudarán a
               comprometerte con tu proceso de bienestar emocional.
             </p>
-            <div className="gap flex w-full flex-col gap-1 text-center">
+            {/* TODO: This was removed (commented) per client request */}
+            {/* <div className="gap flex w-full flex-col gap-1 text-center">
               {services.map((service) => (
                 <p key={service.id}>
                   {service.description} - {service.price}
                 </p>
               ))}
-            </div>
+            </div> */}
             <a
               className="flex justify-center"
               href={externalLinks.whatsapp}
