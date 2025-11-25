@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import React from "react";
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
         className="absolute -z-10"
         src={"/Picture_1.jpeg"}
         alt="Logo"
-        fill
+        layout="fill"
         objectFit="cover"
         objectPosition="10% 40%"
       />
@@ -19,14 +19,16 @@ const Footer = () => {
         Creando espacios para sanar
       </p>
 
-      <div className="container md:h-[250px]">
-        <Image
-          src={"/Logotipo_Principal.png"}
-          alt="Logo"
-          className="mx-auto mr-0 w-[125px] rounded-full object-cover sm:w-[150px] md:w-[250px]"
-          width={1080}
-          height={1080}
-        />
+      <div className="container relative mx-auto flex w-full items-center justify-end md:h-[250px]">
+        <div className="relative h-[125px] w-[125px] overflow-hidden rounded-full sm:h-[150px] sm:w-[150px] md:h-[250px] md:w-[250px]">
+          <Image
+            src={"/Logotipo_Principal.png"}
+            alt="Logo"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-full"
+          />
+        </div>
       </div>
 
       <p className="text-center text-sm font-semibold">

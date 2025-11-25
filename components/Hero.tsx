@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Button } from "./ui/button";
 import { homeRoutes, externalLinks } from "@/app/_utils/constants";
 
@@ -27,13 +27,18 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 px-4 text-center text-white sm:px-6 md:w-1/2 md:text-left md:text-black lg:px-8">
         <div className="flex flex-col-reverse md:flex-col">
-          <Image
-            src={"/Logo.png"}
-            alt="Logo"
-            className="absolute -bottom-24 left-1/2 mx-auto w-20 -translate-x-1/2 md:absolute md:-top-20 md:bottom-auto md:left-7 md:w-[200px] md:translate-x-0"
-            width={1080}
-            height={1080}
-          />
+          {/* Tailwind-sized absolute wrapper so the Image can use layout="fill" */}
+          <div className="absolute -bottom-24 left-1/2 mx-auto h-20 w-20 -translate-x-1/2 overflow-hidden rounded-full md:-top-20 md:bottom-auto md:left-7 md:h-[200px] md:w-[200px] md:translate-x-0">
+            <div className="relative h-full w-full">
+              <Image
+                src={"/Logo.png"}
+                alt="Logo"
+                layout="fill"
+                objectFit="cover"
+                className="object-cover"
+              />
+            </div>
+          </div>
           <div className="flex-1 md:ml-36">
             <h1 className="mb-2 mt-14 text-2xl font-medium sm:text-3xl md:mt-0 md:text-5xl">
               Maria Paula Mendoza V.
