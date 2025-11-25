@@ -5,23 +5,23 @@ import Image from "next/legacy/image";
 import ServicesFirst from "./ServicesFirst";
 
 const ServicesSection = () => {
-  const services = [
-    {
-      id: 1,
-      description: "1 sesión",
-      price: "130.000 COP",
-    },
-    {
-      id: 2,
-      description: "4 sesiones",
-      price: "500.000 COP",
-    },
-    {
-      id: 3,
-      description: "6 sesiones",
-      price: "720.000 COP",
-    },
-  ];
+  // const services = [
+  //   {
+  //     id: 1,
+  //     description: "1 sesión",
+  //     price: "130.000 COP",
+  //   },
+  //   {
+  //     id: 2,
+  //     description: "4 sesiones",
+  //     price: "500.000 COP",
+  //   },
+  //   {
+  //     id: 3,
+  //     description: "6 sesiones",
+  //     price: "720.000 COP",
+  //   },
+  // ];
 
   const titleProps = {
     className: "mb-4 text-2xl font-bold sm:text-3xl",
